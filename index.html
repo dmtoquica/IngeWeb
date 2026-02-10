@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingeniería Web | Plataforma Educativa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .unit-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+
+        /* Active link highlight */
+        .nav-link.active {
+            color: #3b82f6;
+            border-bottom: 2px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navegación -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-blue-700 uppercase tracking-wider">Ingeniería<span class="text-blue-400">Web</span></span>
+                </div>
+                <!-- Menú Desktop -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#inicio" class="nav-link px-3 py-2 text-sm font-medium hover:text-blue-600">Inicio</a>
+                    <a href="#u1" class="nav-link px-3 py-2 text-sm font-medium hover:text-blue-600">Fundamentos</a>
+                    <a href="#u2" class="nav-link px-3 py-2 text-sm font-medium hover:text-blue-600">UX</a>
+                    <a href="#u3" class="nav-link px-3 py-2 text-sm font-medium hover:text-blue-600">Diseño</a>
+                    <a href="#u4" class="nav-link px-3 py-2 text-sm font-medium hover:text-blue-600">Implementación</a>
+                    <a href="#u5" class="nav-link px-3 py-2 text-sm font-medium hover:text-blue-600">Calidad</a>
+                </div>
+                <!-- Botón Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-6 space-y-2 shadow-inner">
+            <a href="#inicio" class="block px-3 py-2 text-base font-medium">Inicio</a>
+            <a href="#u1" class="block px-3 py-2 text-base font-medium">Fundamentos</a>
+            <a href="#u2" class="block px-3 py-2 text-base font-medium">UX</a>
+            <a href="#u3" class="block px-3 py-2 text-base font-medium">Diseño</a>
+            <a href="#u4" class="block px-3 py-2 text-base font-medium">Implementación</a>
+            <a href="#u5" class="block px-3 py-2 text-base font-medium">Calidad</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="gradient-bg text-white py-20 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Mastering Web Engineering</h1>
+            <p class="text-xl md:text-2xl opacity-90 mb-10">Desde los fundamentos hasta la calidad y sostenibilidad en el ciclo de vida del software web.</p>
+            <div class="flex justify-center gap-4">
+                <a href="#u1" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-50 transition">Empezar Guía</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-12 space-y-24">
+
+        <!-- UNIDAD 1 -->
+        <section id="u1" class="scroll-mt-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="p-3 bg-blue-100 rounded-lg text-blue-600">
+                    <i class="fa-solid fa-layer-group text-3xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900 uppercase">Unidad 1: Fundamentos</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-600 unit-card">
+                    <h3 class="text-xl font-bold mb-3">1.1 ¿Qué es Ingeniería Web?</h3>
+                    <p class="text-gray-600">Disciplina centrada en el diseño, desarrollo y mantenimiento de aplicaciones de alta calidad mediante enfoques sistemáticos y cuantificables. No es solo "hacer páginas", es resolver problemas reales de forma eficiente.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-600 unit-card">
+                    <h3 class="text-xl font-bold mb-3">1.2 Cómo funciona la Web</h3>
+                    <p class="text-gray-600">Basada en el modelo <strong>Cliente-Servidor</strong>. El cliente solicita vía HTTP/HTTPS y el servidor responde con contenido (HTML, CSS, JS). Incluye el uso de APIs y servicios REST.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-600 unit-card">
+                    <h3 class="text-xl font-bold mb-3">1.3 Ciclo de Vida</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1 mt-2">
+                        <li>Análisis de requisitos</li>
+                        <li>Diseño conceptual (Wireframes)</li>
+                        <li>Implementación (Código)</li>
+                        <li>Pruebas y Despliegue</li>
+                        <li>Mantenimiento (inherente al ciclo)</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-600 unit-card">
+                    <h3 class="text-xl font-bold mb-3">1.4 Roles del Proyecto</h3>
+                    <p class="text-gray-600">Equipos multidisciplinares: Ingenieros Web, Arquitectos, Diseñadores UX/UI, QA y DevOps colaboran para el éxito estratégico.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- UNIDAD 2 -->
+        <section id="u2" class="scroll-mt-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="p-3 bg-green-100 rounded-lg text-green-600">
+                    <i class="fa-solid fa-user-check text-3xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900 uppercase">Unidad 2: Usuario y Experiencia (UX)</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-green-50 p-6 rounded-xl">
+                    <h3 class="text-lg font-bold text-green-800 mb-2">UX Básico</h3>
+                    <p class="text-sm">Cómo se siente el usuario. Se planifica desde el inicio mediante escenarios de uso y métodos de evaluación.</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-xl">
+                    <h3 class="text-lg font-bold text-green-800 mb-2">Usabilidad</h3>
+                    <p class="text-sm">Eficacia, eficiencia y satisfacción. Requiere navegación intuitiva e indicadores claros de uso.</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-xl">
+                    <h3 class="text-lg font-bold text-green-800 mb-2">Accesibilidad</h3>
+                    <p class="text-sm">Uso por personas con diferentes capacidades. Claves: atributos ARIA, navegación por teclado y contrastes.</p>
+                </div>
+            </div>
+            <div class="mt-8 bg-green-600 text-white p-8 rounded-2xl flex flex-col md:flex-row items-center gap-6">
+                <div class="text-4xl"><i class="fa-solid fa-people-group"></i></div>
+                <div>
+                    <h3 class="text-xl font-bold">Diseño Centrado en el Usuario (UCD)</h3>
+                    <p class="opacity-90">Integramos al usuario desde el principio con prototipos y tests constantes para evitar errores costosos a futuro.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- UNIDAD 3 -->
+        <section id="u3" class="scroll-mt-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="p-3 bg-yellow-100 rounded-lg text-yellow-600">
+                    <i class="fa-solid fa-pen-ruler text-3xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900 uppercase">Unidad 3: Diseño de la Aplicación</h2>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/3 p-8 bg-gray-50 border-r border-gray-100">
+                        <h3 class="text-xl font-bold mb-4">Arquitectura Web</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="bg-yellow-400 text-white px-2 py-0.5 rounded text-xs font-bold mt-1">1</span>
+                                <div><p class="font-semibold">Presentación</p><span class="text-xs text-gray-500 italic">Frontend / Interfaz</span></div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-yellow-400 text-white px-2 py-0.5 rounded text-xs font-bold mt-1">2</span>
+                                <div><p class="font-semibold">Lógica de Negocio</p><span class="text-xs text-gray-500 italic">Backend / Procesamiento</span></div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-yellow-400 text-white px-2 py-0.5 rounded text-xs font-bold mt-1">3</span>
+                                <div><p class="font-semibold">Datos</p><span class="text-xs text-gray-500 italic">Bases de Datos / Servicios</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <div class="grid sm:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-bold border-b-2 border-yellow-200 mb-3 inline-block">Navegación</h4>
+                                <p class="text-sm text-gray-600">Define el desplazamiento: mapas del sitio, menús jerárquicos y breadcrumbs (rutas semánticas).</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold border-b-2 border-yellow-200 mb-3 inline-block">Wireframes</h4>
+                                <p class="text-sm text-gray-600">Esquemas visuales sencillos para comunicar la estructura antes de escribir una sola línea de código.</p>
+                            </div>
+                            <div class="sm:col-span-2 bg-yellow-50 p-4 rounded-lg">
+                                <h4 class="font-bold mb-2">Flujos de Usuario (User Flows)</h4>
+                                <p class="text-sm">Camino del usuario para cumplir objetivos: <span class="font-mono text-xs">Registro → Login → Perfil → Acción</span>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UNIDAD 4 -->
+        <section id="u4" class="scroll-mt-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="p-3 bg-red-100 rounded-lg text-red-600">
+                    <i class="fa-solid fa-code text-3xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900 uppercase">Unidad 4: Implementación</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-gray-900 text-gray-100 p-6 rounded-xl">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-brands fa-html5 text-orange-500 text-2xl"></i>
+                        <h3 class="font-bold">HTML Semántico</h3>
+                    </div>
+                    <p class="text-sm mb-4">Mejora accesibilidad y SEO. Usa etiquetas descriptivas:</p>
+                    <div class="text-xs font-mono bg-gray-800 p-3 rounded border border-gray-700">
+                        &lt;header&gt; &lt;nav&gt;<br>
+                        &lt;article&gt; &lt;section&gt;<br>
+                        &lt;footer&gt;
+                    </div>
+                </div>
+                <div class="bg-gray-900 text-gray-100 p-6 rounded-xl">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-brands fa-css3-alt text-blue-500 text-2xl"></i>
+                        <h3 class="font-bold">CSS Moderno</h3>
+                    </div>
+                    <p class="text-sm mb-4">Separa presentación de estructura. Conceptos clave:</p>
+                    <ul class="text-xs space-y-1 opacity-80 list-disc list-inside">
+                        <li>Flexbox y Grid</li>
+                        <li>Responsividad (RWD)</li>
+                        <li>Variables y Preprocesadores</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-900 text-gray-100 p-6 rounded-xl">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-brands fa-js text-yellow-500 text-2xl"></i>
+                        <h3 class="font-bold">JavaScript</h3>
+                    </div>
+                    <p class="text-sm mb-4">Añade interactividad dinámica que el diseño estático no puede lograr.</p>
+                    <ul class="text-xs space-y-1 opacity-80 list-disc list-inside">
+                        <li>Manipulación del DOM</li>
+                        <li>Gestión de Eventos</li>
+                        <li>Peticiones Asíncronas (Fetch)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-8 grid md:grid-cols-2 gap-4">
+                <div class="border-2 border-dashed border-red-200 p-6 rounded-xl">
+                    <h4 class="font-bold text-red-700 mb-2 underline decoration-wavy">Buenas Prácticas</h4>
+                    <p class="text-sm text-gray-600">Código limpio, modularidad, uso de estándares W3C y control de versiones con Git.</p>
+                </div>
+                <div class="flex items-center justify-center">
+                   <div class="text-center p-4 bg-red-50 rounded-lg w-full">
+                       <span class="text-xs font-bold text-red-800 tracking-tighter block uppercase">Aviso de Implementación</span>
+                       <p class="text-sm">La implementación no es solo código; es sostenibilidad.</p>
+                   </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UNIDAD 5 -->
+        <section id="u5" class="scroll-mt-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="p-3 bg-purple-100 rounded-lg text-purple-600">
+                    <i class="fa-solid fa-vial-circle-check text-3xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900 uppercase">Unidad 5: Calidad y Sostenibilidad</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pruebas -->
+                <div class="bg-white border border-purple-100 p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <h3 class="text-purple-700 font-bold mb-2">5.1 Pruebas</h3>
+                    <p class="text-xs text-gray-600 mb-4">Verificar funcionalidad, rendimiento y resistencia a fallos inesperados.</p>
+                    <span class="text-[10px] bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Unitarias / Integración</span>
+                </div>
+                <!-- Rendimiento -->
+                <div class="bg-white border border-purple-100 p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <h3 class="text-purple-700 font-bold mb-2">5.2 Rendimiento</h3>
+                    <p class="text-xs text-gray-600 mb-4">Optimización de recursos, minificación y caché para mejorar carga y SEO.</p>
+                    <span class="text-[10px] bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Web Vitals</span>
+                </div>
+                <!-- Seguridad -->
+                <div class="bg-white border border-purple-100 p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <h3 class="text-purple-700 font-bold mb-2">5.3 Seguridad</h3>
+                    <p class="text-xs text-gray-600 mb-4">Protección contra inyecciones, XSS, CSRF y manejo de autenticación segura.</p>
+                    <span class="text-[10px] bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Security by Design</span>
+                </div>
+                <!-- Mantenimiento -->
+                <div class="bg-white border border-purple-100 p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <h3 class="text-purple-700 font-bold mb-2">5.4 Mantenimiento</h3>
+                    <p class="text-xs text-gray-600 mb-4">Actualización constante, corrección de errores y adaptación a necesidades.</p>
+                    <span class="text-[10px] bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Evolución Continua</span>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-gray-50 border border-gray-200 p-8 rounded-2xl text-center">
+                <p class="italic text-gray-600">"El mantenimiento no es el final, es el reinicio del ciclo de vida para garantizar la relevancia del producto."</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 px-4 mt-20">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 border-b border-gray-800 pb-10">
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Contenido</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#u1" class="hover:text-white">Fundamentos Web</a></li>
+                    <li><a href="#u2" class="hover:text-white">Usuario & UX</a></li>
+                    <li><a href="#u3" class="hover:text-white">Diseño de Arquitectura</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Desarrollo</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#u4" class="hover:text-white">Implementación Técnica</a></li>
+                    <li><a href="#u5" class="hover:text-white">QA & Sostenibilidad</a></li>
+                </ul>
+            </div>
+            <div class="text-center md:text-right">
+                <span class="text-xl font-bold text-white uppercase tracking-wider">Ingeniería<span class="text-blue-400">Web</span></span>
+                <p class="text-xs mt-2">Plataforma de estudio para profesionales del software.</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-10 text-center text-xs">
+            <p>&copy; 2024 Guía de Ingeniería Web. Diseñado para aprendizaje disciplinado.</p>
+        </div>
+    </footer>
+
+    <!-- Notificación de Scroll -->
+    <div id="scroll-top" class="fixed bottom-6 right-6 hidden">
+        <button onclick="window.scrollTo(0,0)" class="bg-blue-600 text-white p-3 rounded-full shadow-2xl hover:bg-blue-700 transition">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <script>
+        // Toggle menú móvil
+        const btnMenu = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        
+        btnMenu.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Ocultar menú móvil al hacer click en un link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Mostrar botón "Ir arriba" al bajar
+        window.addEventListener('scroll', () => {
+            const btnScroll = document.getElementById('scroll-top');
+            if (window.scrollY > 500) {
+                btnScroll.classList.remove('hidden');
+            } else {
+                btnScroll.classList.add('hidden');
+            }
+
+            // Resaltar navegación activa
+            updateActiveLink();
+        });
+
+        function updateActiveLink() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
