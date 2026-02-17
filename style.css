@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8fafc;
+}
+
+header {
+  background: #1e3a8a;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+nav button {
+  padding: 0.5rem;
+  border: 1px solid #1e3a8a;
+  background: white;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background: #1e3a8a;
+  color: white;
+}
+
+main {
+  padding: 1rem;
+}
+
+section {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+svg {
+  width: 100%;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+}
