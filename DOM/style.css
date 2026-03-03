@@ -1,0 +1,99 @@
+:root {
+    --primary: #2563eb;
+    --success: #22c55e;
+    --danger: #ef4444;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #1e293b;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary);
+}
+
+/* Formulario */
+.form-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    outline: none;
+}
+
+input { flex: 2; }
+select { flex: 1; }
+
+button#addBtn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button#addBtn:hover {
+    background-color: #1d4ed8;
+}
+
+/* Grid de Tareas */
+.task-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjeta de Tarea */
+.task-card {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 6px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.task-card:hover { transform: translateY(-5px); }
+
+/* Colores por prioridad */
+.alta { border-left-color: var(--danger); }
+.media { border-left-color: #f59e0b; }
+.baja { border-left-color: var(--success); }
+
+.task-card.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+    background-color: #f1f5f9;
+}
+
+.actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.complete-btn { background: #dcfce7; color: #166534; border: none; cursor: pointer; }
+.delete-btn { background: #fee2e2; color: #991b1b; border: none; cursor: pointer; }
